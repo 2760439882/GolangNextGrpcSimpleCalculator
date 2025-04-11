@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/2760439882/calculator-backend/calculator;calculator"; // 替换为您的实际包路径
+
+service Calculator {
+  rpc Calculate(CalculationRequest) returns (CalculationResponse);
+}
+
+message CalculationRequest {
+  double operand1 = 1;
+  double operand2 = 2;
+  string operator = 3; // "+", "-", "*", "/"
+}
+
+message CalculationResponse {
+  double result = 1;
+}
