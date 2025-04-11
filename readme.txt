@@ -8,5 +8,5 @@ calculator-frontend 是前端项目
 
 node v20.10.0
 
-grpc安装相关环境均为最新版
+grpc安装相关环境均为最新版（2025/4/10）
 
