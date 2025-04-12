@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package calculator;
+
+// 计算请求消息
+message CalculateRequest {
+  double operand1 = 1;
+  double operand2 = 2;
+  string operator = 3; // 可能的值: "+", "-", "*", "/"
+}
+
+// 计算响应消息
+message CalculateResponse {
+  double result = 1;
+}
+
+// 定义计算器服务
+service Calculator {
+  rpc Calculate(CalculateRequest) returns (CalculateResponse);
+}
